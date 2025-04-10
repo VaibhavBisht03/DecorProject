@@ -1,0 +1,111 @@
+/* Navbar.css */
+
+.navbar-wrapper {
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Banner */
+.announcement-bar {
+  background-color: #d6d1c3;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  font-size: 14px;
+}
+
+.arrow-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.arrow-icon:first-child {
+  left: 15px;
+}
+
+.arrow-icon:last-child {
+  right: 15px;
+}
+
+.explore-link {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Main Navigation Bar */
+.main-navbar {
+  background-color: #6f6a58;
+  color: white;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-family: serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: border-bottom 0.2s;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid white;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.get-app {
+  background-color: white;
+  color: black;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: white;
+  color: black;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 50%;
+}

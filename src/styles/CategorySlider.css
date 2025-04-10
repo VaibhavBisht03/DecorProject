@@ -1,0 +1,6 @@
+
+/* ✅ Subtle highlight for active thumbnail */
+.swiper-slide-thumb-active img {
+  transform: scale(1.1);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
