@@ -6,6 +6,7 @@ import "swiper/css/thumbs";
 import "swiper/css/autoplay";
 import "../../styles/CategorySlider.css";
 
+
 const bannerImages = [
   "/CategorySlider/Banner.webp",
   "/CategorySlider/Floor-Lamps.webp",
@@ -19,10 +20,10 @@ const categoryItems = [
   { image: "/CategorySlider/Floor-Lamps.webp", title: "Floor Lamps" },
   { image: "/CategorySlider/Table_Lamps_Web_Banner.webp", title: "Study Lamps" },
   { image: "/CategorySlider/Table-Lamps.webp", title: "Crystal Lamps" },
-  { image: "/CategorySlider/Table_Lamps_Web_Banner.webp", title: "Lamp Shades" },
+  { image: "/CategorySlider/Table_Lamps_Web_Banner.webp", title: "Wall Lamps" },
 ];
 
-const CategorySlider = () => {
+const CategorySlider = ({onCategorySelect }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
@@ -53,16 +54,19 @@ const CategorySlider = () => {
           modules={[Thumbs]}
           watchSlidesProgress
           slidesPerView={categoryItems.length}
-          spaceBetween={12}
+          spaceBetween={10}
           className="w-auto my-thumb-slider"
         >
           {categoryItems.map((item, index) => (
-            <SwiperSlide key={index} className="!w-auto text-center">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-7 h-7 rounded-full object-cover transition-all duration-200"
-              />
+            <SwiperSlide key={index} className="!w-auto mx-2 my-2" onClick={() => onCategorySelect(item.title)}>
+              <div className="flex flex-col items-center cursor-pointer">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-15 h-15 rounded-full object-cover transition-all duration-200"
+                />
+                <span className="text-sm text-gray-700">{item.title}</span>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

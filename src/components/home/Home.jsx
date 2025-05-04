@@ -1,19 +1,19 @@
-// import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import CategorySlider from "./CategorySlider";
 import NewArrivalsSection from "./NewArrivalsSection";
+import ProductList from "./ProductList"; 
 import "../../styles/Home.css";
 
 function Home() {
-  const products = [
-    { id: 1, name: "Vintage Vase", price: "$30" },
-    { id: 2, name: "Wooden Table", price: "$120" },
-  ];
+  const [selectedCategory, setSelectedCategory] = useState("Table Lamps");
 
   return (
     <div className="home">
-      <CategorySlider />
+      <CategorySlider
+        onCategorySelect={setSelectedCategory} />
       <NewArrivalsSection />
-     
+      <ProductList category={selectedCategory} />
+
     </div>
   );
 }
